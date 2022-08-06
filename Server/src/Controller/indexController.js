@@ -6,14 +6,17 @@ const { default: mongoose } = require("mongoose");
 //////////////////////// USERS  //////////////////////////////////
 
 exports.getUser = catchAsync(async (req, res) => {
-  let userMe = await User.findById(req.params.id);
-  res.send(userMe);
-});
-exports.getAllUser = catchAsync(async (req, res) => {
-  const users = await User.find({});
+  let userMe = await User.findById(req.params.id).populate("Transactions");
   res.json({
     status: "success",
-    users,
+    user: userMe,
+  });
+});
+exports.getAllUser = catchAsync(async (req, res) => {
+  const user = await User.find();
+  res.json({
+    status: "success",
+    user,
   });
 });
 
@@ -27,6 +30,22 @@ exports.createUser = catchAsync(async (req, res) => {
   res.json({
     status: "success",
     user: newUser,
+  });
+});
+
+exports.updateUser = catchAsync(async (req, res) => {
+  const { transactions } = req.body;
+  const updatedUser = await User.findOneAndUpdate(
+    {
+      walletAddress: req.params.id,
+    },
+    {
+      transactions,
+    }
+  );
+  res.json({
+    status: "success",
+    user: updatedUser,
   });
 });
 
@@ -100,6 +119,7 @@ exports.buyUnits = async (req, res) => {
       currentUnitsLeft: currentUnitsLeft - units,
       perDayLentUnits: perDayLentUnits + units,
       totalUnitsLent: totalUnitsLent + units,
+      transactions: [transaction.id],
     }
   );
 
@@ -136,12 +156,13 @@ exports.sellUnits = async (req, res) => {
     { walletAddress: lender },
     {
       currentUnitsLeft: currentUnitsLeft + units,
+      transactions: [(await transaction).id],
     }
   );
 
   res.json({
     status: "success",
-    user: lenderUser,
+    user: updatedLender,
     transaction,
   });
 };

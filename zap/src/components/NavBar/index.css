@@ -1,0 +1,21 @@
+.login-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000c57;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+.login-profile img {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: 2px #000c57 solid;
+  margin-right: 0.75rem;
+}
+.login-profile p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 130px;
+}

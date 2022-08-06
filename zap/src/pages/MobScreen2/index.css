@@ -1,0 +1,155 @@
+.mob-container {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  border-radius: 20px;
+}
+.mob-frame {
+  position: relative;
+  width: 400px;
+  border: #eee 1px solid;
+  color: #0f1b34;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  background: #ffffff;
+  box-shadow: 0px 68px 41px rgba(0, 0, 0, 0.01),
+    0px 30px 30px rgba(0, 0, 0, 0.02), 0px 8px 17px rgba(0, 0, 0, 0.02),
+    0px 0px 0px rgba(0, 0, 0, 0.02);
+  border-radius: 20px;
+  /* height: ; */
+}
+
+.top-frame {
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+/*
+  .bottom-frame {
+    position: absolute;
+    height: 171px;
+    left: 0%;
+    right: 0%;
+    bottom: 0px;
+  
+    background: #0f1b34;
+  } */
+.qr-code-section {
+  width: 300px;
+  align-self: center;
+  margin-top: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.qr-code-section img {
+  width: 300px;
+  align-self: center;
+}
+
+.bottom-frame {
+  background: #0f1b34;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.bf-header {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height, or 160% */
+  letter-spacing: 0.09px;
+  color: #ecf2ff;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.bf-available-units {
+  display: flex;
+  width: 90%;
+  font-weight: 500;
+  align-self: center;
+  /* justify-content: space-between; */
+}
+
+.green-circle {
+  height: 20px;
+  width: 20px;
+  background: #44d600;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.bf-loader {
+  align-self: center;
+  margin-bottom: 0.4rem;
+}
+
+.bf-units-left {
+  margin: 0.5rem 0;
+  color: #ffac33;
+  align-self: center;
+  font-size: 1.15rem;
+}
+.bf-sub-heading {
+  margin: 0.5rem 0;
+  align-self: center;
+  font-weight: 500;
+  line-height: 30px;
+  font-size: 1.7rem;
+}
+.bf-lender-addr {
+  margin: 0.5rem 0;
+  align-self: center;
+  font-weight: 500;
+  line-height: 30px;
+  font-size: 1.7rem;
+  display: flex;
+}
+.bf-lender-addr p {
+  margin-right: 1rem;
+}
+.bf-lender-addr div {
+  width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.loader {
+  display: block;
+  position: relative;
+  height: 12px;
+  width: 80%;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 1rem;
+  align-self: center;
+}
+.loader:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: #44d600;
+  animation: 10s prog ease-in forwards;
+}
+
+@keyframes prog {
+  to {
+    width: 100%;
+  }
+}

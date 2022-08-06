@@ -13,18 +13,31 @@ const userSchema = new mongoose.Schema(
     },
     totalUnitsLent: {
       type: Number,
+      default: 0,
     },
     perDayLentUnits: {
       type: Number,
+      default: 0,
     },
-    maxUnitsPerDay: String,
-    hasHitMaxQuota: Boolean,
-    currentUnitsLeft: Number,
+    maxUnitsPerDay: {
+      type: Number,
+      default: 5,
+    },
+    hasHitMaxQuota: {
+      type: Boolean,
+      default: false,
+    },
+    currentUnitsLeft: {
+      type: Number,
+      default: 0,
+    },
     nextQuertyTime: Number,
-    transactions: {
-      type: mongoose.SchemaTypes.ObjectId,
-      ref: "Transactions",
-    },
+    transactions: [
+      {
+        type: mongoose.SchemaTypes.ObjectId,
+        ref: "Transactions",
+      },
+    ],
   },
   {
     timestamps: true,
@@ -34,7 +47,6 @@ const userSchema = new mongoose.Schema(
 );
 
 userSchema.pre("save", function (next) {
-  ss;
   if (this.currentUnitsLeft == this.maxUnitsPerDay) {
     this.hasHitMaxQuota = true;
   }

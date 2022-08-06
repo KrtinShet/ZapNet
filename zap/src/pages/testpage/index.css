@@ -1,0 +1,139 @@
+.fuckyou {
+  height: 100vh;
+  background-image: url("./../../../public/img/Frame\ 121.svg");
+}
+.main-pricing {
+  position: absolute;
+  width: 170px;
+  height: 63px;
+  left: 480px;
+  top: 172px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 52px;
+  line-height: 63px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.secondary-pricing {
+  position: absolute;
+  width: 68px;
+  height: 63px;
+  left: 761px;
+  top: 172px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 52px;
+  line-height: 63px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.left-long-text {
+  position: absolute;
+  width: 234px;
+  height: 35px;
+  left: 56px;
+  top: 635px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 35px;
+
+  color: #ff4848;
+}
+
+.sub-text-1 {
+  position: absolute;
+  width: 47px;
+  height: 36px;
+  left: 900px;
+  top: 900px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.025em;
+  font-feature-settings: "liga" off;
+
+  color: #111827;
+}
+
+.sub-text-2 {
+  position: absolute;
+  width: 66px;
+  height: 36px;
+  left: 1150px;
+  top: 900px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.025em;
+  font-feature-settings: "liga" off;
+
+  color: #111827;
+}
+.sub-text-3 {
+  position: absolute;
+  width: 21px;
+  height: 36px;
+  left: 1400px;
+  top: 890px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.025em;
+  font-feature-settings: "liga" off;
+
+  color: #111827;
+}
+.sub-text-4 {
+  position: absolute;
+  width: 67px;
+  height: 36px;
+  left: 1640px;
+  top: 900px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.025em;
+  font-feature-settings: "liga" off;
+
+  color: #111827;
+}

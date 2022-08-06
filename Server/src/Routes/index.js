@@ -4,13 +4,19 @@ const {
   sellUnits,
   getUser,
   createTransaction,
+  createUser,
+  getAllTransactions,
+  getAllUser,
+  getTransaction,
+  updateUser,
 } = require("./../Controller/indexController");
 
 //////////////////////// USERS  //////////////////////////////////
 
-router.get("/user", getAllUsers);
+router.get("/user", getAllUser);
 router.post("/user", createUser);
 router.get("/user/:id", getUser);
+router.patch("/user/:id ", updateUser);
 
 //////////////////////// TRANSACTIONS  //////////////////////////////////
 
